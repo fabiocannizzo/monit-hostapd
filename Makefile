@@ -14,5 +14,7 @@ monit-hostapd: monit-hostapd.o
 clean:
 	rm -f *~ *.o monit-hostapd
 
-#install:
-#	install -D swconfig $(DESTDIR)$(PREFIX)/sbin/swconfig
+install:
+	systemctl stop monit-hostapd
+	cp monit-hostapd /etc/bin
+	systemctl start monit-hostapd
