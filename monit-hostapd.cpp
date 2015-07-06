@@ -27,7 +27,7 @@ int main()
          if ( line.find(connected) != string::npos ) {
             add_list.clear();
          }
-	 else if ( line.find(assoc) != string::npos ) {
+	      else if ( line.find(assoc) != string::npos ) {
             add_list[m.str()] = time(NULL);
             //cout << "associated at " << t.str() <<  ": " << m.str() << endl;
          }
